@@ -1,4 +1,7 @@
-<div class="card">
+<div>
+  <p-select [options]="languages" [(ngModel)]="selectedLanguage" optionLabel="name" optionValue="code"
+            placeholder="Select a Language" (onChange)="handleChange()"/>
+
   <p-tabs [value]="0">
     <p-tablist>
       @for (tab of tabs; track tab.value) {
